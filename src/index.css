@@ -1,13 +1,40 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.counter {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(3, 70, 62);
+  display: flex;
+  flex-direction: column; /* zarovvnám do sloupce - flex-direction určuje hlavní osu*/
+  justify-content: center; /* zarovnání po hlavní ose*/
+  align-items: center;
+}
+
+.counter h1 {
+  color: white;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.counter h2 {
+  color: white;
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: rgb(2, 28, 25);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  width: 100px;
+  height: 35px;
+  font-size: 15px;
 }

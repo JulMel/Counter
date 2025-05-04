@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import DecreaseButton from "./components/DecreaseButton";
+import IncreaseButton from "./components/IncreaseButton";
+import ResetButton from "./components/ResetButton";
+import { useState } from "react";
 
-function App() {
+const App = () => {
+  const [value, setValue] = useState(0);
+
+  const decreaseOne = () => {
+    const minusValue = value - 1;
+    setValue(minusValue);
+  };
+
+  const increaseOne = () => {
+    const plusValue = value + 1;
+    setValue(plusValue);
+  };
+
+  const reset = () => {
+    setValue(0);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="counter">
+      <h1>Počítadlo</h1>
+      <h2>{value}</h2>
+      <DecreaseButton odecti={decreaseOne} />
+      <IncreaseButton pricti={increaseOne} />
+      <ResetButton resetuj={reset} />
     </div>
   );
-}
+};
 
 export default App;
